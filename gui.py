@@ -10,7 +10,10 @@ convert_button = sg.Button("Convert")
 result_text = sg.Text(key="result_text")
 exit_button = sg.Button("Exit")
 
-layout = [[feet_text, feet_input], [inches_text, inches_input], [convert_button, exit_button, result_text]]
+col1 = sg.Column([[feet_text], [inches_text]])
+col2 = sg.Column([[feet_input], [inches_input]])
+
+layout = [[col1, col2], [convert_button, exit_button, result_text]]
 
 window = sg.Window("Convertor", layout=layout)
 
